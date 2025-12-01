@@ -131,7 +131,7 @@ public class SupplierService {
         }
 
         String status = order.getStatus().toLowerCase();
-        if(status.equals("completed") || status.equals("rejected")){
+        if(!status.equals("pending")){
             return 3;
         }
 
@@ -140,4 +140,5 @@ public class SupplierService {
         return 1;
 
     }
+
 }
