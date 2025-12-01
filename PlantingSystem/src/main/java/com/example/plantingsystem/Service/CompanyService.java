@@ -168,7 +168,7 @@ public class CompanyService {
 
         String status = request.getStatus().toLowerCase();
 
-        if(status.equals("completed") || status.equals("rejected")){
+        if(!status.equals("pending")){
             return 3;
         }
 
@@ -181,5 +181,6 @@ public class CompanyService {
     public String aiSupplierSuggestionsByLocation(String location) {
         return plantAiService.getSupplierSuggestionsByLocation(location);
     }
+
 
 }
